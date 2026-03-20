@@ -1,7 +1,7 @@
 import { AppShell } from "@/components/AppShell";
 import { MetricCard } from "@/components/MetricCard";
 import { sampleAnalysis } from "@/lib/mock-data";
-import { Users, AlertTriangle, CheckCircle2, TrendingUp } from "lucide-react";
+import { Users, AlertTriangle, CheckCircle2, TrendingUp, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FairnessGauge } from "@/components/FairnessGauge";
@@ -61,7 +61,9 @@ export default function Dashboard() {
         </div>
 
         <div className="animate-fade-up stagger-3 flex gap-3">
-          <Button onClick={() => navigate("/upload")}>Upload New Dataset</Button>
+          <Button onClick={() => navigate("/upload")}>
+            Upload New Dataset <ArrowRight className="ml-1 h-4 w-4" />
+          </Button>
           <Button variant="outline" onClick={() => navigate("/analysis")}>
             View Full Analysis
           </Button>

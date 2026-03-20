@@ -1,11 +1,17 @@
 import { useNavigate } from "react-router-dom";
-import { BarChart3, Shield, Eye, ArrowRight, Sparkles } from "lucide-react";
+import { BarChart3, Shield, Eye, ArrowRight, Sparkles, Lock, Zap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const pillars = [
-  { icon: Eye, title: "Detect", desc: "Surface hidden bias in hiring models using Fairlearn metrics" },
-  { icon: Sparkles, title: "Explain", desc: "Understand why decisions are made with SHAP explainability" },
-  { icon: Shield, title: "Fix", desc: "Apply algorithmic fairness to correct biased outcomes" },
+  { icon: Eye, title: "Detect", desc: "Surface hidden bias in hiring models using Fairlearn's demographic parity and equal opportunity metrics" },
+  { icon: Sparkles, title: "Explain", desc: "Understand which features drive unfair outcomes through SHAP-based explainability analysis" },
+  { icon: Shield, title: "Fix", desc: "One-click bias mitigation using ExponentiatedGradient — see before vs. after results instantly" },
+];
+
+const trustPoints = [
+  { icon: Lock, text: "Data never stored permanently" },
+  { icon: Shield, text: "Privacy-first AI auditing" },
+  { icon: Globe, text: "Open-source fairness stack" },
 ];
 
 export default function Landing() {
@@ -27,41 +33,74 @@ export default function Landing() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-5xl px-6 pt-20 pb-16">
+      <section className="mx-auto max-w-5xl px-6 pt-24 pb-20">
         <div className="animate-fade-up max-w-2xl">
-          <div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-            <Shield className="h-3 w-3 text-primary" />
+          <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
+            <Zap className="h-3 w-3 text-primary" />
             Google Solution Challenge 2026
           </div>
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground leading-[1.1] sm:text-5xl">
-            Audit AI hiring decisions for fairness
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl" style={{ lineHeight: 1.08 }}>
+            Detect Bias. Explain Decisions. Build Fair AI.
           </h1>
-          <p className="mt-4 max-w-lg text-lg text-muted-foreground leading-relaxed">
-            Upload your dataset. Detect demographic bias. Understand why it happens. Fix it with one click — powered by Fairlearn and SHAP.
+          <p className="mt-5 max-w-lg text-lg text-muted-foreground leading-relaxed">
+            Upload your hiring dataset. See exactly where bias hides, why it happens, and fix it with one click — powered by Fairlearn, SHAP, and Gemini.
           </p>
-          <div className="mt-8 flex gap-3">
-            <Button size="lg" onClick={() => navigate("/dashboard")}>
-              Get Started <ArrowRight className="ml-1 h-4 w-4" />
+          <div className="mt-10 flex gap-3">
+            <Button size="lg" onClick={() => navigate("/upload")}>
+              Analyze Dataset <ArrowRight className="ml-1.5 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" onClick={() => navigate("/analysis")}>
-              View Demo Analysis
+              View Demo
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-24">
+      <section className="mx-auto max-w-5xl px-6 pb-20">
         <div className="grid gap-4 sm:grid-cols-3">
           {pillars.map(({ icon: Icon, title, desc }, i) => (
             <div
               key={title}
-              className={`animate-fade-up stagger-${i + 1} group rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow`}
+              className={`animate-fade-up stagger-${i + 1} rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow`}
             >
               <div className="mb-3 inline-flex rounded-lg bg-primary/10 p-2.5">
                 <Icon className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-semibold text-card-foreground">{title}</h3>
               <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <div className="animate-fade-up stagger-4 rounded-xl border border-border bg-card p-8 shadow-sm">
+          <h2 className="text-sm font-semibold text-card-foreground mb-1">How It Works</h2>
+          <p className="text-xs text-muted-foreground mb-6">Three steps to a fair hiring model</p>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {[
+              { step: "01", label: "Upload CSV", detail: "Drop your hiring dataset with demographic columns" },
+              { step: "02", label: "Run Analysis", detail: "We train biased + fair models, compute SHAP values" },
+              { step: "03", label: "Fix & Export", detail: "One-click mitigation with downloadable audit report" },
+            ].map(({ step, label, detail }) => (
+              <div key={step} className="flex gap-3">
+                <span className="text-2xl font-bold text-primary/20 leading-none">{step}</span>
+                <div>
+                  <p className="text-sm font-medium text-card-foreground">{label}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">{detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-24">
+        <div className="animate-fade-up stagger-5 flex flex-wrap items-center justify-center gap-6 rounded-xl border border-border bg-card/50 px-6 py-4">
+          {trustPoints.map(({ icon: Icon, text }) => (
+            <div key={text} className="flex items-center gap-2 text-xs text-muted-foreground">
+              <Icon className="h-3.5 w-3.5 text-success" />
+              <span>{text}</span>
             </div>
           ))}
         </div>

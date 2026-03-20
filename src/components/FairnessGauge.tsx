@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 interface Props {
   label: string;
   before: number;
-  after: number;
+  after?: number;
 }
 
 function getLevel(gap: number) {
@@ -14,43 +14,40 @@ function getLevel(gap: number) {
 
 export function FairnessGauge({ label, before, after }: Props) {
   const beforeLevel = getLevel(before);
-  const afterLevel = getLevel(after);
 
   return (
     <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
       <h3 className="text-sm font-semibold text-card-foreground mb-4">{label}</h3>
       <div className="space-y-4">
-        <div>
-          <div className="flex items-center justify-between mb-1.5">
-            <span className="text-xs text-muted-foreground">Before Mitigation</span>
-            <span className={cn("text-xs font-semibold", beforeLevel.color)}>{beforeLevel.label}</span>
-          </div>
-          <div className="h-2.5 rounded-full bg-secondary overflow-hidden">
-            <div
-              className={cn("h-full rounded-full transition-all duration-700", beforeLevel.bg)}
-              style={{ width: `${Math.min(before * 100, 100)}%` }}
-            />
-          </div>
-          <p className="mt-1 text-right text-xs font-mono text-muted-foreground">
-            Gap: {(before * 100).toFixed(1)}%
-          </p>
-        </div>
-        <div>
-          <div className="flex items-center justify-between mb-1.5">
-            <span className="text-xs text-muted-foreground">After Mitigation</span>
-            <span className={cn("text-xs font-semibold", afterLevel.color)}>{afterLevel.label}</span>
-          </div>
-          <div className="h-2.5 rounded-full bg-secondary overflow-hidden">
-            <div
-              className={cn("h-full rounded-full transition-all duration-700", afterLevel.bg)}
-              style={{ width: `${Math.min(after * 100, 100)}%` }}
-            />
-          </div>
-          <p className="mt-1 text-right text-xs font-mono text-muted-foreground">
-            Gap: {(after * 100).toFixed(1)}%
-          </p>
-        </div>
+        <GaugeRow label="Before Mitigation" value={before} level={beforeLevel} />
+        {after !== undefined && (
+          <GaugeRow label="After Mitigation" value={after} level={getLevel(after)} />
+        )}
       </div>
+    </div>
+  );
+}
+
+function GaugeRow({ label: rowLabel, value, level }: {
+  label: string;
+  value: number;
+  level: { label: string; color: string; bg: string };
+}) {
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-1.5">
+        <span className="text-xs text-muted-foreground">{rowLabel}</span>
+        <span className={cn("text-xs font-semibold", level.color)}>{level.label}</span>
+      </div>
+      <div className="h-2.5 rounded-full bg-secondary overflow-hidden">
+        <div
+          className={cn("h-full rounded-full transition-all duration-700", level.bg)}
+          style={{ width: `${Math.min(value * 100, 100)}%` }}
+        />
+      </div>
+      <p className="mt-1 text-right text-xs font-mono text-muted-foreground">
+        Gap: {(value * 100).toFixed(1)}%
+      </p>
     </div>
   );
 }
