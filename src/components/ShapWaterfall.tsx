@@ -1,44 +1,51 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from "recharts";
 import type { ShapFeature } from "@/lib/mock-data";
+import { cn } from "@/lib/utils";
+import { AlertTriangle } from "lucide-react";
 
-interface Props {
-  features: ShapFeature[];
+const sensitiveKeywords = ["gender", "age", "race", "zip"];
+
+function isSensitive(feature: string) {
+  return sensitiveKeywords.some(k => feature.toLowerCase().includes(k));
 }
 
-export function ShapWaterfall({ features }: Props) {
-  const sorted = [...features].sort((a, b) => Math.abs(b.importance) - Math.abs(a.importance));
-  const data = sorted.map((f) => ({
-    feature: f.feature.replace(/_/g, " "),
-    value: f.direction === "negative" ? -f.importance : f.importance,
-  }));
+export function ShapWaterfall({ features }: { features: ShapFeature[] }) {
+  const maxVal = Math.max(...features.map(f => f.importance));
 
   return (
     <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
-      <h3 className="mb-1 text-sm font-semibold text-card-foreground">SHAP Feature Importance</h3>
-      <p className="mb-4 text-xs text-muted-foreground">Red bars indicate features that should not influence hiring decisions</p>
-      <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={data} layout="vertical" margin={{ left: 20 }}>
-          <XAxis type="number" tick={{ fontSize: 11 }} />
-          <YAxis type="category" dataKey="feature" tick={{ fontSize: 11 }} width={110} />
-          <Tooltip
-            contentStyle={{
-              borderRadius: "8px",
-              border: "1px solid hsl(var(--border))",
-              fontSize: "13px",
-            }}
-            formatter={(val: number) => [Math.abs(val).toFixed(3), "SHAP value"]}
-          />
-          <ReferenceLine x={0} stroke="hsl(var(--border))" />
-          <Bar dataKey="value" radius={[0, 4, 4, 0]}>
-            {data.map((entry, idx) => (
-              <Cell
-                key={idx}
-                fill={entry.value < 0 ? "hsl(var(--chart-bias-high))" : "hsl(var(--chart-after))"}
-              />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+      <h3 className="text-sm font-semibold text-card-foreground mb-1">Feature Importance (SHAP)</h3>
+      <p className="text-xs text-muted-foreground mb-4">Mean |SHAP| values from LinearExplainer on test set</p>
+
+      <div className="space-y-2.5">
+        {features.map(({ feature, importance }) => {
+          const sensitive = isSensitive(feature);
+          const pct = (importance / maxVal) * 100;
+
+          return (
+            <div key={feature} className="flex items-center gap-3">
+              <span className={cn(
+                "w-32 text-xs font-medium shrink-0 flex items-center gap-1.5",
+                sensitive ? "text-destructive" : "text-card-foreground"
+              )}>
+                {feature}
+                {sensitive && <AlertTriangle className="h-3 w-3" />}
+              </span>
+              <div className="flex-1 h-6 bg-muted rounded-md overflow-hidden">
+                <div
+                  className={cn(
+                    "h-full rounded-md transition-all duration-700",
+                    sensitive ? "bg-destructive/80" : "bg-primary/70"
+                  )}
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+              <span className="text-xs font-mono text-muted-foreground w-12 text-right">
+                {importance.toFixed(2)}
+              </span>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

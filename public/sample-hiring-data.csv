@@ -1,0 +1,801 @@
+experience,education,tech_score,interview_score,age,gender,hired,education_enc,gender_enc
+7,High School,87,97,41,Male,1,1,1
+14,Masters,46,30,40,Female,0,2,0
+9,PhD,60,92,56,Female,1,3,0
+0,Masters,81,53,25,Female,0,2,0
+11,PhD,65,42,26,Male,1,3,1
+14,Masters,83,40,22,Male,1,2,1
+9,Bachelors,95,80,25,Male,1,0,1
+8,Bachelors,53,46,33,Female,0,0,0
+5,Bachelors,96,53,48,Female,0,0,0
+2,Masters,76,48,44,Female,0,2,0
+12,Masters,97,66,46,Male,1,2,1
+13,Bachelors,60,37,42,Female,1,0,0
+7,Masters,57,57,45,Female,0,2,0
+8,Masters,44,34,46,Male,1,2,1
+5,Bachelors,42,46,53,Male,1,0,1
+10,Bachelors,62,65,53,Male,1,0,1
+6,Bachelors,65,48,26,Male,1,0,1
+0,High School,76,93,57,Male,1,1,1
+13,Bachelors,63,40,37,Male,1,0,1
+4,High School,88,83,54,Male,1,1,1
+4,High School,58,74,42,Female,0,1,0
+9,Bachelors,90,76,30,Male,1,0,1
+13,Bachelors,64,41,27,Male,1,0,1
+3,High School,60,50,56,Male,0,1,1
+5,Masters,51,40,43,Male,1,2,1
+6,Bachelors,96,34,26,Female,0,0,0
+8,PhD,80,85,44,Male,1,3,1
+0,PhD,72,49,38,Male,1,3,1
+14,High School,89,70,33,Female,1,1,0
+5,Bachelors,92,75,44,Male,1,0,1
+6,High School,43,41,37,Female,0,1,0
+2,Bachelors,81,99,24,Male,1,0,1
+7,Masters,96,46,51,Male,1,2,1
+14,Bachelors,46,48,43,Female,0,0,0
+4,Bachelors,61,55,30,Female,0,0,0
+14,Bachelors,94,77,50,Female,1,0,0
+8,High School,72,81,44,Male,1,1,1
+4,Masters,56,99,34,Male,1,2,1
+8,Bachelors,63,84,53,Female,0,0,0
+9,Bachelors,73,62,44,Male,1,0,1
+3,Bachelors,67,91,38,Male,1,0,1
+8,PhD,97,52,42,Male,1,3,1
+4,High School,82,44,23,Male,0,1,1
+9,Bachelors,80,56,27,Female,0,0,0
+8,Masters,78,93,39,Male,1,2,1
+2,Bachelors,61,80,51,Female,0,0,0
+14,PhD,88,82,43,Male,1,3,1
+3,Masters,56,80,54,Male,1,2,1
+8,Masters,73,76,51,Male,1,2,1
+9,Masters,45,33,38,Male,1,2,1
+10,PhD,85,36,53,Female,0,3,0
+5,PhD,45,64,35,Female,0,3,0
+1,Masters,73,77,31,Female,0,2,0
+6,Masters,40,74,57,Female,0,2,0
+1,High School,49,48,55,Female,0,1,0
+10,High School,60,92,30,Female,0,1,0
+1,Bachelors,44,67,49,Male,0,0,1
+10,High School,41,96,32,Male,1,1,1
+0,Bachelors,61,88,35,Male,1,0,1
+10,Bachelors,87,98,40,Male,1,0,1
+10,Bachelors,96,42,36,Male,1,0,1
+11,Masters,41,76,49,Male,1,2,1
+10,PhD,49,90,45,Female,1,3,0
+2,High School,73,60,29,Male,1,1,1
+5,Bachelors,55,51,30,Male,1,0,1
+7,Masters,87,72,54,Male,1,2,1
+8,High School,90,96,54,Male,1,1,1
+6,Masters,78,83,40,Female,0,2,0
+3,Bachelors,61,39,24,Male,1,0,1
+5,Bachelors,51,71,31,Female,0,0,0
+4,PhD,63,93,22,Female,1,3,0
+7,Bachelors,86,50,50,Male,1,0,1
+0,Masters,79,95,55,Male,1,2,1
+0,Masters,77,70,34,Female,0,2,0
+12,High School,99,53,22,Female,1,1,0
+14,Masters,98,64,55,Female,1,2,0
+10,PhD,49,85,50,Female,0,3,0
+5,High School,74,59,34,Male,1,1,1
+9,Masters,90,86,50,Male,1,2,1
+11,Bachelors,88,76,45,Male,1,0,1
+1,Masters,71,64,47,Female,0,2,0
+4,Masters,46,48,38,Female,0,2,0
+0,Bachelors,60,37,28,Male,0,0,1
+6,PhD,59,55,34,Male,1,3,1
+0,PhD,65,59,26,Male,1,3,1
+3,Masters,43,36,47,Male,1,2,1
+8,Masters,85,96,24,Female,1,2,0
+0,Masters,91,94,28,Female,0,2,0
+3,Bachelors,61,65,22,Female,0,0,0
+5,Masters,54,54,38,Male,0,2,1
+5,Bachelors,95,66,46,Male,1,0,1
+11,Bachelors,79,30,24,Female,0,0,0
+14,Masters,60,44,36,Female,1,2,0
+12,Bachelors,54,66,50,Female,1,0,0
+7,High School,61,42,53,Female,0,1,0
+0,High School,91,37,47,Male,0,1,1
+6,Bachelors,67,34,37,Male,1,0,1
+0,Masters,53,89,46,Male,0,2,1
+12,Bachelors,66,30,49,Male,1,0,1
+13,Masters,80,65,30,Male,1,2,1
+6,Bachelors,79,64,22,Male,1,0,1
+2,Masters,97,95,50,Female,0,2,0
+10,Bachelors,67,92,43,Male,1,0,1
+7,Bachelors,65,52,37,Male,1,0,1
+2,Masters,88,38,28,Female,0,2,0
+13,Masters,41,63,35,Male,1,2,1
+13,Bachelors,64,75,50,Male,1,0,1
+12,High School,95,33,40,Female,0,1,0
+0,High School,42,59,40,Male,0,1,1
+12,High School,47,32,23,Male,1,1,1
+12,Masters,83,43,36,Male,1,2,1
+13,Bachelors,72,89,24,Male,1,0,1
+7,Bachelors,81,74,32,Female,0,0,0
+2,Bachelors,91,63,51,Female,0,0,0
+1,High School,74,74,39,Female,0,1,0
+0,Bachelors,45,90,23,Female,0,0,0
+13,Bachelors,78,45,53,Female,1,0,0
+2,Bachelors,91,95,29,Male,1,0,1
+14,Bachelors,62,69,43,Female,0,0,0
+1,Masters,64,46,27,Male,1,2,1
+1,High School,98,63,33,Female,0,1,0
+5,PhD,89,45,57,Female,0,3,0
+11,Bachelors,82,89,36,Male,1,0,1
+0,Masters,58,95,49,Male,0,2,1
+1,Masters,44,95,39,Male,1,2,1
+13,Masters,90,42,23,Male,1,2,1
+5,Masters,50,85,34,Female,0,2,0
+2,Bachelors,95,60,36,Female,0,0,0
+14,Bachelors,51,63,41,Male,1,0,1
+3,Bachelors,49,68,50,Male,1,0,1
+0,Bachelors,47,96,50,Male,0,0,1
+7,High School,63,37,24,Male,0,1,1
+12,Bachelors,99,84,40,Male,1,0,1
+6,Masters,67,56,24,Male,1,2,1
+6,Bachelors,80,82,35,Female,0,0,0
+2,Masters,75,68,25,Male,1,2,1
+9,Masters,76,94,32,Male,1,2,1
+9,PhD,60,46,52,Female,0,3,0
+2,Bachelors,47,59,53,Male,0,0,1
+13,Bachelors,94,82,48,Female,1,0,0
+1,Bachelors,48,42,51,Female,0,0,0
+11,Bachelors,86,50,23,Male,1,0,1
+0,Masters,54,48,30,Male,0,2,1
+6,Bachelors,87,82,49,Male,1,0,1
+6,Masters,85,48,52,Male,1,2,1
+11,Bachelors,79,86,55,Male,1,0,1
+1,Masters,57,54,36,Female,0,2,0
+6,Masters,81,60,46,Male,1,2,1
+12,Bachelors,99,84,57,Male,1,0,1
+7,Bachelors,59,52,29,Male,1,0,1
+0,Bachelors,45,61,30,Female,0,0,0
+8,High School,51,91,53,Male,1,1,1
+6,Bachelors,41,39,38,Male,1,0,1
+2,High School,46,83,56,Male,0,1,1
+7,Bachelors,55,81,40,Female,0,0,0
+6,Bachelors,42,49,50,Male,0,0,1
+10,Bachelors,84,61,28,Female,0,0,0
+14,Masters,42,43,49,Female,1,2,0
+12,High School,66,79,30,Male,1,1,1
+7,Masters,89,57,49,Female,0,2,0
+5,Bachelors,82,82,27,Male,1,0,1
+8,Bachelors,79,53,50,Female,0,0,0
+14,Masters,77,51,38,Female,1,2,0
+4,High School,72,59,37,Male,1,1,1
+2,Bachelors,67,92,44,Male,1,0,1
+2,Bachelors,40,33,52,Female,0,0,0
+0,Bachelors,94,88,24,Male,1,0,1
+11,Bachelors,47,37,42,Male,1,0,1
+14,Bachelors,76,41,47,Male,1,0,1
+7,Masters,71,60,57,Female,1,2,0
+1,Bachelors,99,63,43,Female,0,0,0
+2,Bachelors,87,78,33,Male,1,0,1
+7,Bachelors,82,86,34,Male,1,0,1
+13,Masters,76,55,32,Male,1,2,1
+7,High School,43,47,37,Female,0,1,0
+13,Bachelors,69,67,29,Male,1,0,1
+10,Bachelors,45,79,23,Female,1,0,0
+3,PhD,85,37,51,Male,1,3,1
+3,Bachelors,93,70,51,Female,0,0,0
+4,Bachelors,58,35,33,Male,0,0,1
+5,Bachelors,71,98,31,Male,1,0,1
+4,Masters,48,73,32,Male,1,2,1
+13,Bachelors,51,93,36,Female,1,0,0
+14,Bachelors,50,58,37,Female,0,0,0
+6,Masters,85,57,38,Male,1,2,1
+1,Masters,94,40,47,Female,1,2,0
+6,Bachelors,55,94,23,Female,0,0,0
+9,Masters,40,48,33,Female,0,2,0
+6,Bachelors,84,38,47,Male,1,0,1
+0,Bachelors,94,56,44,Male,0,0,1
+6,High School,92,63,39,Male,1,1,1
+4,PhD,60,73,53,Female,0,3,0
+2,High School,69,97,24,Female,0,1,0
+12,Bachelors,52,44,24,Female,0,0,0
+2,High School,73,80,51,Male,1,1,1
+3,Masters,43,42,22,Male,0,2,1
+12,Bachelors,67,78,51,Female,1,0,0
+11,High School,77,99,53,Female,1,1,0
+1,High School,97,85,49,Female,0,1,0
+1,High School,70,80,42,Female,0,1,0
+0,Bachelors,98,66,34,Female,0,0,0
+14,Masters,94,46,48,Male,1,2,1
+4,Bachelors,66,87,57,Male,1,0,1
+3,Bachelors,44,58,28,Female,0,0,0
+10,Masters,64,62,43,Female,0,2,0
+9,High School,42,89,31,Male,1,1,1
+14,Bachelors,72,84,36,Male,1,0,1
+1,PhD,43,39,36,Female,0,3,0
+2,Bachelors,64,76,25,Male,1,0,1
+6,Bachelors,59,52,53,Male,1,0,1
+6,Bachelors,73,50,44,Male,1,0,1
+11,Bachelors,65,42,27,Female,0,0,0
+3,Bachelors,44,62,45,Female,0,0,0
+4,High School,74,53,41,Male,1,1,1
+4,High School,67,40,41,Female,0,1,0
+5,High School,68,46,33,Male,1,1,1
+13,PhD,48,97,54,Male,1,3,1
+8,Masters,91,76,49,Female,0,2,0
+1,High School,77,54,29,Female,0,1,0
+4,High School,89,50,22,Female,0,1,0
+11,Masters,45,41,43,Female,0,2,0
+2,High School,58,66,27,Female,0,1,0
+3,Bachelors,99,71,42,Male,1,0,1
+9,PhD,83,46,53,Male,1,3,1
+5,Bachelors,96,77,56,Male,1,0,1
+11,Masters,50,57,36,Male,1,2,1
+7,PhD,41,70,26,Female,0,3,0
+0,Bachelors,86,76,27,Male,1,0,1
+9,High School,83,47,46,Female,0,1,0
+13,Bachelors,83,42,50,Female,0,0,0
+7,Masters,48,42,28,Female,0,2,0
+10,Masters,60,60,34,Male,1,2,1
+13,Masters,63,31,39,Female,0,2,0
+6,High School,73,45,23,Male,0,1,1
+0,Masters,61,38,29,Male,1,2,1
+1,PhD,42,67,32,Female,0,3,0
+2,Masters,51,83,54,Male,1,2,1
+0,PhD,67,85,48,Male,1,3,1
+13,Masters,69,74,41,Female,1,2,0
+8,Masters,65,63,33,Male,1,2,1
+7,Bachelors,87,38,52,Female,0,0,0
+1,Bachelors,60,37,48,Female,0,0,0
+12,High School,67,36,53,Female,0,1,0
+8,Masters,95,65,31,Male,1,2,1
+6,Bachelors,65,47,24,Male,0,0,1
+8,Masters,72,32,48,Female,0,2,0
+5,PhD,60,57,56,Male,1,3,1
+5,Masters,74,99,52,Female,0,2,0
+10,High School,91,73,36,Female,1,1,0
+13,Bachelors,73,50,37,Female,1,0,0
+3,High School,80,57,34,Male,1,1,1
+9,Masters,90,83,56,Male,1,2,1
+9,Masters,86,83,32,Female,1,2,0
+12,PhD,57,94,42,Male,1,3,1
+12,Bachelors,97,50,32,Male,1,0,1
+1,PhD,50,42,51,Female,0,3,0
+6,Masters,96,86,56,Female,1,2,0
+4,Bachelors,62,78,43,Female,0,0,0
+10,Masters,87,83,52,Female,1,2,0
+5,Bachelors,61,39,35,Male,1,0,1
+1,Bachelors,56,82,45,Female,0,0,0
+4,Masters,44,73,53,Female,0,2,0
+9,Bachelors,83,76,57,Male,1,0,1
+3,Masters,50,82,53,Male,1,2,1
+8,Masters,69,75,36,Female,0,2,0
+5,Bachelors,54,42,56,Female,0,0,0
+1,Bachelors,66,66,24,Female,0,0,0
+0,Bachelors,74,53,37,Female,0,0,0
+4,Bachelors,72,31,26,Male,0,0,1
+8,Bachelors,59,43,42,Male,1,0,1
+5,Bachelors,55,39,31,Female,0,0,0
+9,High School,73,64,40,Female,0,1,0
+11,Bachelors,41,54,46,Female,1,0,0
+6,High School,74,32,25,Female,0,1,0
+4,Masters,79,46,50,Male,1,2,1
+9,Masters,95,41,40,Male,1,2,1
+5,Bachelors,67,83,23,Female,1,0,0
+4,Bachelors,86,53,31,Female,0,0,0
+10,PhD,78,58,46,Female,0,3,0
+8,Masters,45,72,41,Female,0,2,0
+14,PhD,48,54,40,Female,0,3,0
+5,Masters,59,89,44,Male,1,2,1
+10,High School,99,94,45,Male,1,1,1
+7,High School,40,57,32,Male,0,1,1
+1,Bachelors,47,45,55,Female,0,0,0
+11,Bachelors,94,76,49,Male,1,0,1
+12,Bachelors,62,87,26,Male,1,0,1
+8,Bachelors,42,56,26,Male,1,0,1
+4,Bachelors,43,82,42,Male,1,0,1
+6,Masters,97,71,33,Female,1,2,0
+9,Masters,64,88,25,Male,1,2,1
+12,Bachelors,86,76,41,Male,1,0,1
+0,Masters,77,63,46,Female,0,2,0
+9,Bachelors,54,66,35,Male,1,0,1
+4,Masters,60,35,32,Male,1,2,1
+11,High School,74,36,53,Male,1,1,1
+13,PhD,96,54,32,Female,1,3,0
+9,Masters,92,62,39,Male,1,2,1
+13,Bachelors,92,84,48,Female,1,0,0
+1,High School,85,87,39,Male,1,1,1
+11,Bachelors,91,36,44,Male,1,0,1
+5,High School,53,86,32,Male,0,1,1
+10,High School,75,41,42,Male,1,1,1
+0,Masters,51,45,26,Female,0,2,0
+2,Bachelors,56,72,44,Female,0,0,0
+4,Masters,78,36,46,Female,0,2,0
+3,PhD,48,80,31,Male,1,3,1
+2,Bachelors,74,61,43,Male,0,0,1
+9,Bachelors,99,37,40,Female,1,0,0
+12,High School,52,74,22,Male,1,1,1
+4,Masters,54,88,28,Male,1,2,1
+10,Bachelors,57,33,25,Male,1,0,1
+7,PhD,90,96,22,Male,1,3,1
+10,Masters,72,58,36,Female,0,2,0
+3,Bachelors,45,58,33,Female,0,0,0
+0,High School,98,57,43,Female,0,1,0
+10,Masters,66,73,43,Male,1,2,1
+6,Masters,62,33,38,Male,1,2,1
+7,High School,98,38,50,Male,1,1,1
+2,Bachelors,66,34,35,Male,0,0,1
+5,Masters,73,85,41,Male,1,2,1
+1,High School,95,79,54,Female,0,1,0
+6,PhD,85,44,36,Female,0,3,0
+14,Bachelors,77,61,33,Male,1,0,1
+7,High School,53,57,41,Female,0,1,0
+5,Masters,75,51,51,Female,0,2,0
+5,Bachelors,92,46,24,Female,0,0,0
+4,Bachelors,47,88,49,Female,0,0,0
+7,High School,74,86,47,Male,1,1,1
+0,High School,58,55,51,Male,0,1,1
+9,Masters,69,54,34,Male,1,2,1
+3,Bachelors,53,39,34,Female,0,0,0
+14,Bachelors,98,74,23,Male,1,0,1
+3,Masters,59,40,23,Male,0,2,1
+2,Masters,88,82,57,Male,1,2,1
+2,High School,64,97,47,Male,1,1,1
+3,Bachelors,79,57,32,Female,0,0,0
+10,PhD,63,94,29,Female,1,3,0
+0,Masters,53,78,43,Male,1,2,1
+13,Bachelors,65,76,41,Male,1,0,1
+10,Bachelors,77,81,29,Male,1,0,1
+12,Bachelors,62,83,50,Male,1,0,1
+10,Masters,61,89,47,Male,1,2,1
+1,Masters,87,86,51,Male,1,2,1
+8,Masters,96,76,38,Male,1,2,1
+9,Masters,58,60,41,Female,0,2,0
+1,Masters,85,75,37,Female,0,2,0
+4,High School,90,55,28,Male,1,1,1
+8,Bachelors,42,34,37,Male,1,0,1
+8,High School,81,81,48,Female,1,1,0
+7,Bachelors,58,83,44,Male,1,0,1
+0,Masters,48,62,45,Female,0,2,0
+0,Bachelors,67,79,30,Female,0,0,0
+8,Bachelors,59,67,56,Male,1,0,1
+12,High School,84,56,41,Male,1,1,1
+10,Bachelors,46,44,38,Female,0,0,0
+7,Bachelors,53,90,52,Male,1,0,1
+9,Bachelors,48,50,29,Female,0,0,0
+8,Masters,98,75,36,Female,1,2,0
+6,Bachelors,99,98,52,Female,0,0,0
+2,Masters,94,35,51,Male,1,2,1
+2,High School,96,67,41,Female,0,1,0
+1,High School,99,91,33,Male,1,1,1
+4,Bachelors,58,91,38,Male,0,0,1
+11,Bachelors,86,75,51,Female,0,0,0
+11,Masters,91,42,50,Male,1,2,1
+2,Bachelors,53,32,40,Female,0,0,0
+13,Bachelors,95,35,32,Female,1,0,0
+5,Masters,77,37,55,Male,1,2,1
+1,High School,92,73,28,Male,1,1,1
+11,Bachelors,75,62,55,Male,1,0,1
+2,Masters,79,79,41,Male,1,2,1
+4,Masters,56,40,45,Male,1,2,1
+11,Bachelors,69,57,31,Female,0,0,0
+10,PhD,48,99,53,Male,1,3,1
+10,Masters,72,70,36,Male,1,2,1
+0,Bachelors,95,45,41,Female,0,0,0
+12,Masters,91,97,24,Male,1,2,1
+0,Bachelors,64,77,29,Female,0,0,0
+9,Bachelors,53,85,44,Male,1,0,1
+8,Bachelors,50,93,32,Male,1,0,1
+6,Bachelors,92,88,29,Female,0,0,0
+0,Masters,74,91,50,Female,0,2,0
+14,Bachelors,80,40,51,Female,1,0,0
+11,Masters,98,47,31,Female,1,2,0
+13,Masters,53,48,49,Female,0,2,0
+7,High School,69,84,57,Male,1,1,1
+2,Masters,80,55,34,Male,1,2,1
+7,Bachelors,43,35,53,Female,0,0,0
+14,Bachelors,98,33,57,Female,1,0,0
+4,Masters,43,58,47,Female,0,2,0
+0,Bachelors,67,88,43,Male,1,0,1
+6,Bachelors,47,46,25,Male,1,0,1
+4,High School,41,72,52,Female,0,1,0
+5,High School,80,95,39,Male,1,1,1
+5,Bachelors,85,63,45,Female,0,0,0
+7,Bachelors,61,37,44,Female,0,0,0
+8,PhD,80,42,43,Male,1,3,1
+1,Bachelors,95,37,23,Female,0,0,0
+8,Bachelors,94,94,52,Female,1,0,0
+11,Bachelors,55,72,32,Male,1,0,1
+14,High School,68,68,49,Female,1,1,0
+10,PhD,88,88,53,Male,1,3,1
+9,Masters,87,73,26,Female,0,2,0
+8,Masters,69,38,31,Male,1,2,1
+12,High School,51,66,45,Female,0,1,0
+9,Bachelors,74,65,56,Male,1,0,1
+14,Bachelors,50,57,44,Male,1,0,1
+9,Masters,85,71,38,Female,0,2,0
+6,High School,89,72,22,Male,1,1,1
+0,Bachelors,60,71,52,Male,0,0,1
+6,PhD,60,95,52,Female,1,3,0
+9,Bachelors,44,84,55,Female,0,0,0
+4,Bachelors,87,77,30,Female,1,0,0
+5,High School,59,51,43,Female,0,1,0
+9,PhD,76,56,34,Male,1,3,1
+6,High School,42,96,46,Male,1,1,1
+13,Masters,83,42,39,Male,1,2,1
+14,Masters,72,74,33,Female,1,2,0
+4,Bachelors,92,39,38,Female,0,0,0
+6,Masters,48,38,36,Female,0,2,0
+8,High School,48,83,36,Female,0,1,0
+2,Bachelors,43,56,36,Male,0,0,1
+7,Masters,74,63,34,Male,1,2,1
+1,Masters,56,30,38,Male,0,2,1
+10,Masters,73,61,53,Male,1,2,1
+6,Bachelors,63,96,30,Male,1,0,1
+12,High School,71,49,41,Female,0,1,0
+1,High School,40,64,47,Male,0,1,1
+14,High School,47,46,48,Male,1,1,1
+13,Bachelors,84,47,42,Male,1,0,1
+3,Bachelors,62,74,39,Female,0,0,0
+6,Bachelors,86,82,34,Female,0,0,0
+2,Bachelors,79,97,37,Male,1,0,1
+1,Bachelors,51,94,30,Male,1,0,1
+10,Bachelors,93,30,33,Female,0,0,0
+9,Masters,51,87,40,Male,1,2,1
+6,Bachelors,85,55,28,Female,0,0,0
+0,PhD,86,49,56,Female,0,3,0
+13,Masters,54,39,39,Male,1,2,1
+14,High School,80,88,37,Male,1,1,1
+7,Masters,58,70,25,Female,0,2,0
+2,Bachelors,65,34,46,Male,1,0,1
+11,Bachelors,91,94,53,Male,1,0,1
+11,Bachelors,68,46,34,Female,0,0,0
+12,Bachelors,61,51,38,Female,0,0,0
+1,Bachelors,79,70,27,Female,0,0,0
+2,Bachelors,60,97,40,Female,0,0,0
+4,Masters,90,98,34,Male,1,2,1
+10,Masters,77,40,47,Male,1,2,1
+7,Bachelors,59,85,35,Female,0,0,0
+9,Masters,96,80,52,Female,1,2,0
+6,High School,68,50,25,Male,1,1,1
+6,Bachelors,90,55,29,Female,0,0,0
+11,Masters,43,48,46,Male,1,2,1
+6,Bachelors,94,89,34,Male,1,0,1
+14,High School,46,76,53,Male,1,1,1
+7,High School,67,55,49,Male,1,1,1
+0,Bachelors,67,69,51,Male,0,0,1
+3,PhD,43,34,24,Male,0,3,1
+12,Bachelors,61,50,49,Male,1,0,1
+5,PhD,51,33,24,Female,0,3,0
+8,Bachelors,84,52,55,Female,0,0,0
+12,Bachelors,42,44,37,Female,0,0,0
+1,Bachelors,61,37,43,Female,0,0,0
+0,Masters,83,70,53,Male,1,2,1
+12,High School,41,48,29,Male,1,1,1
+9,Masters,63,75,29,Female,1,2,0
+11,Masters,73,57,27,Male,1,2,1
+13,Bachelors,66,97,35,Female,0,0,0
+1,PhD,94,44,53,Male,1,3,1
+6,Masters,80,66,56,Female,0,2,0
+2,Masters,40,30,31,Male,0,2,1
+9,High School,47,96,24,Female,0,1,0
+1,Bachelors,62,53,33,Male,1,0,1
+13,Bachelors,77,56,52,Female,1,0,0
+10,Bachelors,45,69,50,Male,1,0,1
+6,High School,61,92,26,Female,0,1,0
+12,Masters,64,90,46,Female,1,2,0
+12,High School,57,65,52,Male,1,1,1
+1,Bachelors,56,53,42,Female,0,0,0
+2,PhD,51,53,41,Female,0,3,0
+10,Masters,45,33,43,Male,1,2,1
+6,Bachelors,65,96,25,Female,0,0,0
+13,Masters,66,63,34,Female,1,2,0
+3,High School,47,86,41,Female,0,1,0
+12,High School,58,78,34,Male,1,1,1
+13,Masters,99,82,38,Male,1,2,1
+0,Bachelors,81,52,57,Female,0,0,0
+12,Bachelors,40,98,54,Female,0,0,0
+13,Bachelors,96,82,22,Male,1,0,1
+4,High School,68,91,36,Female,0,1,0
+11,Bachelors,84,70,34,Male,1,0,1
+8,Bachelors,88,86,38,Male,1,0,1
+7,Masters,74,89,45,Male,1,2,1
+11,Masters,79,83,29,Male,1,2,1
+14,Bachelors,53,99,48,Female,1,0,0
+8,Bachelors,74,86,44,Male,1,0,1
+9,High School,87,39,29,Female,1,1,0
+13,High School,84,69,29,Female,1,1,0
+8,Masters,59,36,47,Female,0,2,0
+14,Bachelors,95,67,34,Male,1,0,1
+6,High School,88,90,49,Male,1,1,1
+3,Masters,52,32,46,Female,0,2,0
+4,Masters,77,80,37,Female,0,2,0
+0,Masters,88,76,23,Male,1,2,1
+13,Bachelors,85,97,39,Female,1,0,0
+0,Bachelors,88,67,38,Female,0,0,0
+2,Bachelors,47,65,51,Female,0,0,0
+12,High School,82,70,34,Female,1,1,0
+13,Masters,59,98,53,Female,1,2,0
+7,Masters,99,42,50,Male,1,2,1
+13,Masters,72,87,51,Female,1,2,0
+1,Masters,65,79,39,Female,0,2,0
+3,Bachelors,78,59,34,Male,1,0,1
+1,Masters,60,91,42,Male,0,2,1
+13,Bachelors,92,54,51,Male,1,0,1
+4,Bachelors,88,56,42,Female,0,0,0
+8,Bachelors,81,80,38,Female,1,0,0
+0,High School,82,86,40,Male,0,1,1
+4,Bachelors,93,76,36,Female,0,0,0
+13,PhD,80,68,30,Male,1,3,1
+14,Bachelors,48,45,31,Female,0,0,0
+8,High School,63,51,52,Female,0,1,0
+14,Bachelors,76,83,44,Female,1,0,0
+0,Masters,88,50,51,Male,0,2,1
+8,Bachelors,80,45,54,Male,1,0,1
+7,Masters,56,88,30,Male,1,2,1
+3,High School,63,60,22,Male,0,1,1
+11,Masters,60,71,56,Female,0,2,0
+10,Bachelors,90,61,32,Female,0,0,0
+9,Masters,98,88,55,Female,0,2,0
+4,Masters,78,63,37,Female,0,2,0
+12,High School,94,38,30,Female,1,1,0
+4,High School,80,40,53,Female,0,1,0
+10,High School,78,39,36,Female,0,1,0
+11,Bachelors,52,46,33,Female,0,0,0
+5,Bachelors,50,97,54,Male,1,0,1
+6,Masters,85,77,35,Male,1,2,1
+7,Bachelors,58,81,29,Male,1,0,1
+14,Bachelors,50,54,29,Female,1,0,0
+13,High School,52,50,48,Female,0,1,0
+7,High School,85,94,33,Male,1,1,1
+10,Masters,84,92,22,Female,0,2,0
+13,Bachelors,40,80,32,Female,0,0,0
+12,Masters,79,65,52,Male,1,2,1
+1,Masters,83,95,38,Male,1,2,1
+8,Masters,58,44,54,Female,0,2,0
+6,Masters,51,68,53,Male,1,2,1
+3,Bachelors,47,99,50,Female,0,0,0
+3,PhD,47,30,42,Male,0,3,1
+10,High School,92,52,42,Female,0,1,0
+7,High School,84,68,44,Female,0,1,0
+3,Masters,51,86,27,Female,0,2,0
+12,PhD,87,63,43,Female,1,3,0
+14,Masters,72,70,29,Male,1,2,1
+5,High School,84,42,56,Male,0,1,1
+4,Bachelors,65,99,32,Male,1,0,1
+2,PhD,78,35,45,Female,0,3,0
+12,Bachelors,67,81,42,Female,1,0,0
+13,Masters,97,32,23,Female,0,2,0
+9,Masters,44,92,40,Male,1,2,1
+10,Bachelors,47,78,49,Male,1,0,1
+1,Bachelors,64,76,38,Male,0,0,1
+8,Bachelors,66,84,27,Male,1,0,1
+9,Bachelors,85,93,40,Female,1,0,0
+8,Masters,62,94,49,Male,1,2,1
+0,Bachelors,69,96,23,Male,1,0,1
+9,Masters,84,44,25,Female,1,2,0
+2,High School,86,61,43,Male,1,1,1
+7,PhD,62,97,47,Male,1,3,1
+5,Bachelors,88,47,57,Female,0,0,0
+4,High School,86,72,34,Male,1,1,1
+4,High School,59,64,53,Female,0,1,0
+5,Masters,57,87,38,Female,0,2,0
+14,Masters,57,62,57,Female,0,2,0
+6,Masters,41,43,40,Male,1,2,1
+0,High School,43,63,56,Female,0,1,0
+8,High School,69,90,49,Male,1,1,1
+2,Bachelors,72,33,22,Male,1,0,1
+3,Bachelors,75,88,39,Male,1,0,1
+9,Bachelors,57,58,54,Female,0,0,0
+0,PhD,76,35,33,Male,0,3,1
+12,PhD,58,78,29,Male,1,3,1
+10,PhD,86,69,45,Female,1,3,0
+9,Masters,67,94,37,Male,1,2,1
+2,Bachelors,79,98,25,Male,1,0,1
+1,Bachelors,59,56,48,Male,1,0,1
+1,Bachelors,88,35,30,Male,1,0,1
+13,Masters,72,42,37,Male,1,2,1
+0,High School,51,93,33,Male,0,1,1
+7,Bachelors,97,91,52,Female,1,0,0
+2,High School,90,48,45,Male,1,1,1
+2,Bachelors,54,72,35,Male,1,0,1
+5,Masters,80,49,46,Female,0,2,0
+12,Masters,78,97,55,Male,1,2,1
+7,Bachelors,41,73,24,Female,0,0,0
+12,PhD,68,52,45,Male,1,3,1
+14,Masters,80,31,30,Male,1,2,1
+8,High School,49,51,47,Male,0,1,1
+8,Bachelors,41,86,41,Male,1,0,1
+3,Bachelors,90,36,31,Male,1,0,1
+13,High School,50,85,40,Male,1,1,1
+4,PhD,52,96,24,Male,1,3,1
+1,Bachelors,49,45,45,Male,0,0,1
+10,Masters,53,80,26,Male,1,2,1
+8,Bachelors,57,41,24,Male,0,0,1
+7,High School,90,82,48,Male,1,1,1
+2,Bachelors,93,34,37,Male,1,0,1
+10,High School,48,56,36,Female,0,1,0
+11,Bachelors,96,41,56,Male,1,0,1
+12,PhD,78,46,33,Female,1,3,0
+8,Bachelors,67,35,47,Female,0,0,0
+2,Masters,42,34,55,Male,0,2,1
+8,High School,59,86,44,Female,0,1,0
+1,High School,45,57,52,Female,0,1,0
+11,High School,66,98,41,Male,1,1,1
+9,Bachelors,92,88,33,Male,1,0,1
+8,High School,41,62,44,Female,0,1,0
+14,Bachelors,68,91,25,Female,1,0,0
+7,Bachelors,77,79,44,Male,1,0,1
+8,Bachelors,42,48,22,Male,1,0,1
+4,High School,55,98,46,Male,0,1,1
+10,Bachelors,69,95,23,Male,1,0,1
+10,PhD,79,76,51,Female,1,3,0
+1,Masters,41,68,24,Male,0,2,1
+7,Bachelors,56,97,42,Male,1,0,1
+11,High School,80,62,46,Female,0,1,0
+14,PhD,51,42,41,Male,1,3,1
+5,Masters,74,83,43,Male,1,2,1
+7,Bachelors,82,36,42,Female,0,0,0
+10,Masters,40,43,54,Female,0,2,0
+4,Bachelors,94,48,36,Male,1,0,1
+9,Bachelors,84,83,36,Male,1,0,1
+1,Masters,54,49,46,Male,1,2,1
+5,Bachelors,65,58,42,Male,0,0,1
+4,PhD,76,53,45,Male,1,3,1
+11,Masters,60,92,26,Male,1,2,1
+12,Bachelors,88,86,27,Male,1,0,1
+11,High School,70,37,44,Male,1,1,1
+4,High School,64,91,25,Male,0,1,1
+12,Bachelors,62,58,48,Male,1,0,1
+0,Masters,63,46,39,Male,0,2,1
+1,Bachelors,96,95,42,Male,1,0,1
+7,Bachelors,77,35,49,Male,1,0,1
+12,Masters,67,87,56,Female,1,2,0
+13,High School,60,98,43,Female,1,1,0
+12,Masters,93,57,44,Female,1,2,0
+2,High School,82,91,24,Female,0,1,0
+9,PhD,57,70,31,Male,1,3,1
+2,Bachelors,75,98,46,Male,1,0,1
+7,High School,74,70,29,Male,1,1,1
+7,Bachelors,84,78,32,Female,1,0,0
+1,Bachelors,94,78,26,Female,0,0,0
+7,Masters,48,32,50,Male,1,2,1
+10,Masters,92,39,26,Male,1,2,1
+12,Masters,77,64,30,Male,1,2,1
+12,High School,97,31,23,Male,1,1,1
+0,High School,69,53,22,Female,0,1,0
+5,High School,99,67,51,Female,0,1,0
+7,Bachelors,83,51,32,Male,1,0,1
+2,Masters,73,55,49,Female,0,2,0
+7,Bachelors,71,72,33,Female,0,0,0
+11,High School,42,84,47,Male,1,1,1
+0,Bachelors,42,68,34,Male,0,0,1
+10,Masters,67,58,29,Male,1,2,1
+10,Masters,83,49,49,Male,1,2,1
+8,Masters,54,70,51,Male,1,2,1
+12,Bachelors,80,83,30,Male,1,0,1
+10,High School,62,49,52,Male,1,1,1
+12,Masters,79,48,42,Male,1,2,1
+8,Masters,50,95,55,Female,0,2,0
+4,Bachelors,87,59,52,Male,1,0,1
+9,Masters,71,82,46,Male,1,2,1
+3,Masters,97,63,33,Male,1,2,1
+14,Masters,98,51,22,Female,1,2,0
+10,Masters,96,96,43,Male,1,2,1
+5,Bachelors,93,35,22,Male,1,0,1
+11,Bachelors,75,56,22,Female,0,0,0
+6,Bachelors,99,39,42,Female,0,0,0
+4,Masters,72,77,36,Female,0,2,0
+10,Masters,63,99,38,Male,1,2,1
+12,Masters,78,88,43,Male,1,2,1
+9,High School,73,88,56,Female,1,1,0
+8,Masters,95,31,37,Female,0,2,0
+2,Masters,67,58,29,Female,0,2,0
+14,Masters,76,97,38,Female,1,2,0
+6,Masters,46,94,38,Male,1,2,1
+9,Masters,43,55,47,Female,0,2,0
+9,Bachelors,76,39,34,Male,1,0,1
+10,Bachelors,95,82,38,Male,1,0,1
+4,High School,40,88,38,Male,1,1,1
+13,Bachelors,40,51,35,Male,1,0,1
+6,Masters,86,80,27,Male,1,2,1
+14,Masters,59,77,56,Male,1,2,1
+1,Bachelors,58,50,35,Female,0,0,0
+3,High School,68,51,29,Male,0,1,1
+1,Masters,49,59,36,Female,0,2,0
+13,High School,99,54,48,Male,1,1,1
+12,High School,57,57,34,Male,1,1,1
+12,High School,67,94,52,Male,1,1,1
+11,High School,74,74,56,Male,1,1,1
+6,High School,82,97,27,Male,1,1,1
+1,Bachelors,86,36,26,Male,0,0,1
+12,Bachelors,70,78,43,Male,1,0,1
+13,Masters,66,38,44,Female,0,2,0
+10,Bachelors,50,65,46,Male,1,0,1
+0,Masters,88,30,55,Female,0,2,0
+8,High School,88,39,47,Male,1,1,1
+0,Bachelors,77,65,26,Female,0,0,0
+7,Masters,44,75,47,Female,0,2,0
+14,High School,47,61,41,Female,0,1,0
+1,Bachelors,73,61,27,Male,1,0,1
+11,Bachelors,87,35,27,Male,1,0,1
+7,Masters,91,77,39,Male,1,2,1
+12,High School,95,67,25,Female,1,1,0
+2,Bachelors,51,46,38,Female,0,0,0
+5,Masters,77,56,35,Female,0,2,0
+2,High School,40,83,35,Male,0,1,1
+13,Masters,70,79,34,Female,1,2,0
+6,Masters,43,64,28,Female,0,2,0
+9,PhD,88,54,36,Male,1,3,1
+8,Bachelors,84,57,40,Male,1,0,1
+1,Masters,89,44,56,Female,0,2,0
+14,Bachelors,44,33,38,Female,0,0,0
+11,Bachelors,69,56,56,Female,0,0,0
+11,High School,95,55,40,Male,1,1,1
+14,Masters,63,48,41,Female,0,2,0
+13,Bachelors,98,46,57,Male,1,0,1
+4,Bachelors,42,72,56,Male,0,0,1
+12,High School,50,70,53,Male,1,1,1
+5,Masters,84,71,45,Female,0,2,0
+3,Masters,43,79,38,Female,0,2,0
+3,Masters,65,69,28,Male,1,2,1
+3,Bachelors,66,68,22,Male,1,0,1
+1,High School,85,52,56,Female,0,1,0
+3,Masters,93,81,53,Male,1,2,1
+10,Bachelors,82,76,57,Female,0,0,0
+0,High School,66,92,34,Male,0,1,1
+11,Masters,81,98,27,Male,1,2,1
+5,PhD,90,72,35,Male,1,3,1
+0,Masters,89,77,36,Male,1,2,1
+9,Masters,45,63,25,Female,0,2,0
+5,PhD,98,69,37,Male,1,3,1
+0,Bachelors,54,90,49,Male,0,0,1
+5,Bachelors,92,79,37,Female,0,0,0
+9,PhD,69,96,25,Male,1,3,1
+7,High School,81,91,47,Male,1,1,1
+10,Masters,76,87,49,Female,1,2,0
+1,Bachelors,97,62,53,Female,0,0,0
+1,Bachelors,76,45,23,Male,0,0,1
+13,Masters,81,77,52,Female,1,2,0
+14,PhD,99,39,24,Female,1,3,0
+12,Masters,76,67,29,Male,1,2,1
+11,High School,74,48,45,Male,1,1,1
+3,Masters,62,65,36,Female,0,2,0
+10,Bachelors,45,88,52,Female,0,0,0
+2,Bachelors,43,92,30,Male,1,0,1
+3,Bachelors,57,75,23,Female,0,0,0
+12,Bachelors,99,32,29,Female,1,0,0
+11,Bachelors,48,94,28,Male,1,0,1
+6,PhD,88,37,37,Male,1,3,1
+12,Masters,68,80,56,Male,1,2,1
+10,Masters,52,35,51,Female,0,2,0
+0,High School,98,68,31,Male,1,1,1
+5,PhD,86,89,39,Female,0,3,0
+14,PhD,91,57,26,Female,1,3,0
+14,Masters,56,83,50,Female,1,2,0
+2,High School,84,66,55,Male,1,1,1
+10,High School,71,38,44,Female,0,1,0
+9,Bachelors,87,85,26,Male,1,0,1
+6,High School,61,88,51,Female,0,1,0
+9,Bachelors,43,31,27,Male,1,0,1
+1,PhD,44,90,25,Male,1,3,1
+13,Bachelors,76,87,50,Female,1,0,0
+1,High School,80,89,44,Male,1,1,1
+12,Bachelors,88,69,27,Male,1,0,1
+3,High School,52,65,53,Female,0,1,0
+0,High School,73,66,39,Female,0,1,0
+2,Bachelors,84,47,36,Female,0,0,0
+12,Bachelors,61,92,53,Female,1,0,0
+8,Masters,92,51,30,Male,1,2,1
+6,PhD,98,40,31,Male,1,3,1
+14,Bachelors,62,87,41,Male,1,0,1
+6,Bachelors,90,86,27,Male,1,0,1
+12,Masters,42,33,24,Female,0,2,0
+12,Bachelors,81,36,32,Female,0,0,0
+10,High School,73,90,38,Male,1,1,1
+3,Masters,71,83,53,Male,1,2,1
+1,High School,84,97,25,Female,0,1,0
+14,Masters,90,30,25,Male,1,2,1
+13,Bachelors,97,84,38,Female,1,0,0
+3,Bachelors,88,32,40,Male,1,0,1
+5,Bachelors,60,67,26,Female,0,0,0
+10,Masters,85,30,53,Male,1,2,1
+10,High School,83,67,43,Female,0,1,0
+2,Bachelors,60,58,27,Female,0,0,0
+0,Masters,83,34,56,Female,0,2,0
+13,Bachelors,50,50,43,Female,1,0,0
+11,High School,78,96,22,Female,1,1,0

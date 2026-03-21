@@ -1,47 +1,47 @@
+import type { Candidate } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
-import type { sampleDatasetPreview } from "@/lib/mock-data";
 
-type Candidate = (typeof sampleDatasetPreview)[number];
+interface Props {
+  candidates: Candidate[];
+  showFair: boolean;
+}
 
-export function CandidateTable({ candidates, showFair = true }: { candidates: Candidate[]; showFair?: boolean }) {
+export function CandidateTable({ candidates, showFair }: Props) {
   return (
     <div className="rounded-xl border border-border bg-card shadow-sm overflow-hidden">
-      <div className="px-5 py-3 border-b border-border">
-        <h3 className="text-sm font-semibold text-card-foreground">
-          Sample Candidates {showFair ? "— Before vs After" : "— Biased Model Predictions"}
-        </h3>
+      <div className="p-5 pb-0">
+        <h3 className="text-sm font-semibold text-card-foreground">Sample Predictions</h3>
+        <p className="text-xs text-muted-foreground mt-0.5">
+          {showFair ? "Comparing biased vs fair model outputs" : "Biased model predictions"}
+        </p>
       </div>
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm">
+      <div className="overflow-x-auto mt-3">
+        <table className="w-full text-xs">
           <thead>
-            <tr className="border-b border-border bg-secondary/50">
-              <th className="px-4 py-2.5 text-left font-medium text-muted-foreground">Name</th>
-              <th className="px-4 py-2.5 text-left font-medium text-muted-foreground">Exp</th>
-              <th className="px-4 py-2.5 text-left font-medium text-muted-foreground">Education</th>
-              <th className="px-4 py-2.5 text-left font-medium text-muted-foreground">Score</th>
-              <th className="px-4 py-2.5 text-left font-medium text-muted-foreground">Gender</th>
-              <th className="px-4 py-2.5 text-left font-medium text-muted-foreground">Biased</th>
-              {showFair && <th className="px-4 py-2.5 text-left font-medium text-muted-foreground">Fair</th>}
+            <tr className="border-b border-border text-muted-foreground">
+              <th className="py-2 px-5 text-left font-medium">ID</th>
+              <th className="py-2 px-3 text-left font-medium">Gender</th>
+              <th className="py-2 px-3 text-left font-medium">Exp</th>
+              <th className="py-2 px-3 text-left font-medium">Education</th>
+              <th className="py-2 px-3 text-left font-medium">Tech</th>
+              <th className="py-2 px-3 text-left font-medium">Interview</th>
+              <th className="py-2 px-3 text-left font-medium">Biased</th>
+              {showFair && <th className="py-2 px-3 text-left font-medium">Fair</th>}
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-card-foreground">
             {candidates.map((c) => {
-              const flipped = showFair && c.prediction !== c.fairPrediction;
+              const changed = showFair && c.biasedPrediction !== c.fairPrediction;
               return (
-                <tr key={c.id} className={cn("border-b border-border last:border-0", flipped && "bg-success/5")}>
-                  <td className="px-4 py-3 font-medium">{c.name}</td>
-                  <td className="px-4 py-3 font-mono text-xs">{c.experience}</td>
-                  <td className="px-4 py-3">{c.education}</td>
-                  <td className="px-4 py-3 font-mono text-xs">{c.techScore}</td>
-                  <td className="px-4 py-3">{c.gender}</td>
-                  <td className="px-4 py-3">
-                    <PredictionBadge value={c.prediction} />
-                  </td>
-                  {showFair && (
-                    <td className="px-4 py-3">
-                      <PredictionBadge value={c.fairPrediction} />
-                    </td>
-                  )}
+                <tr key={c.id} className={cn("border-b border-border/50 transition-colors", changed && "bg-success/5")}>
+                  <td className="py-2 px-5 font-mono">{c.id}</td>
+                  <td className="py-2 px-3">{c.gender}</td>
+                  <td className="py-2 px-3 font-mono">{c.experience}y</td>
+                  <td className="py-2 px-3">{c.education}</td>
+                  <td className="py-2 px-3 font-mono">{c.techScore}</td>
+                  <td className="py-2 px-3 font-mono">{c.interviewScore}</td>
+                  <td className="py-2 px-3"><PredBadge value={c.biasedPrediction} /></td>
+                  {showFair && <td className="py-2 px-3"><PredBadge value={c.fairPrediction} changed={changed} /></td>}
                 </tr>
               );
             })}
@@ -52,13 +52,15 @@ export function CandidateTable({ candidates, showFair = true }: { candidates: Ca
   );
 }
 
-function PredictionBadge({ value }: { value: string }) {
+function PredBadge({ value, changed }: { value: number; changed?: boolean }) {
+  const hired = value === 1;
   return (
     <span className={cn(
-      "inline-flex rounded-full px-2 py-0.5 text-xs font-medium",
-      value === "Selected" ? "bg-success/10 text-success" : "bg-destructive/10 text-destructive"
+      "inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium",
+      hired ? "bg-success/10 text-success" : "bg-destructive/10 text-destructive",
+      changed && "ring-1 ring-success/40"
     )}>
-      {value}
+      {hired ? "Hired" : "Rejected"}
     </span>
   );
 }

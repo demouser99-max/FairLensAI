@@ -22,7 +22,7 @@ export function BiasComparisonChart({ before, after, metric, title }: Props) {
     <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
       <h3 className="mb-4 text-sm font-semibold text-card-foreground">{title}</h3>
       <ResponsiveContainer width="100%" height={260}>
-        <BarChart data={data} barGap={4} barSize={after ? 24 : 32}>
+        <BarChart data={data} barGap={4} barSize={after ? 28 : 36}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
           <XAxis dataKey="group" tick={{ fontSize: 12 }} />
           <YAxis tick={{ fontSize: 12 }} domain={[0, 100]} unit="%" />
@@ -31,6 +31,7 @@ export function BiasComparisonChart({ before, after, metric, title }: Props) {
               borderRadius: "8px",
               border: "1px solid hsl(var(--border))",
               fontSize: "13px",
+              background: "hsl(var(--card))",
             }}
           />
           <Legend wrapperStyle={{ fontSize: "12px" }} />

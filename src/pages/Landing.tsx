@@ -1,21 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { BarChart3, Shield, Eye, ArrowRight, Sparkles, Lock, Zap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { analysisData } from "@/lib/mock-data";
 
 const pillars = [
-  { icon: Eye, title: "Detect", desc: "Surface hidden bias in hiring models using Fairlearn's demographic parity and equal opportunity metrics" },
-  { icon: Sparkles, title: "Explain", desc: "Understand which features drive unfair outcomes through SHAP-based explainability analysis" },
-  { icon: Shield, title: "Fix", desc: "One-click bias mitigation using ExponentiatedGradient — see before vs. after results instantly" },
+  { icon: Eye, title: "Detect", desc: "Surface hidden bias using Fairlearn's demographic parity and equal opportunity metrics on real ML models" },
+  { icon: Sparkles, title: "Explain", desc: "See exactly which features drive unfair outcomes through SHAP-based explainability analysis" },
+  { icon: Shield, title: "Fix", desc: "One-click mitigation using ExponentiatedGradient — see quantified before vs after results" },
 ];
 
 const trustPoints = [
-  { icon: Lock, text: "Data never stored permanently" },
-  { icon: Shield, text: "Privacy-first AI auditing" },
-  { icon: Globe, text: "Open-source fairness stack" },
+  { icon: Lock, text: "Data processed locally, never stored" },
+  { icon: Shield, text: "Privacy-first ethical AI auditing" },
+  { icon: Globe, text: "Open-source: Fairlearn + SHAP + scikit-learn" },
 ];
 
 export default function Landing() {
   const navigate = useNavigate();
+  const d = analysisData;
 
   return (
     <div className="min-h-screen bg-background">
@@ -25,7 +27,7 @@ export default function Landing() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
               <BarChart3 className="h-4 w-4 text-primary-foreground" />
             </div>
-            <span className="font-semibold tracking-tight">FairLens AI</span>
+            <span className="font-semibold tracking-tight">FairLens</span>
           </div>
           <Button size="sm" onClick={() => navigate("/dashboard")}>
             Launch App <ArrowRight className="ml-1 h-3.5 w-3.5" />
@@ -37,22 +39,40 @@ export default function Landing() {
         <div className="animate-fade-up max-w-2xl">
           <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
             <Zap className="h-3 w-3 text-primary" />
-            Google Solution Challenge 2026
+            AI Bias Detection & Correction Platform
           </div>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl" style={{ lineHeight: 1.08 }}>
-            Detect Bias. Explain Decisions. Build Fair AI.
+            Detect and Fix Bias in AI Decisions
           </h1>
           <p className="mt-5 max-w-lg text-lg text-muted-foreground leading-relaxed">
-            Upload your hiring dataset. See exactly where bias hides, why it happens, and fix it with one click — powered by Fairlearn, SHAP, and Gemini.
+            Upload your hiring dataset. Quantify bias with real ML metrics. Fix it with one click — powered by
+            scikit-learn, Fairlearn, SHAP, and Gemini.
           </p>
           <div className="mt-10 flex gap-3">
             <Button size="lg" onClick={() => navigate("/upload")}>
-              Analyze Dataset <ArrowRight className="ml-1.5 h-4 w-4" />
+              Start Analysis <ArrowRight className="ml-1.5 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" onClick={() => navigate("/analysis")}>
-              View Demo
+              View Demo Results
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Live stats strip */}
+      <section className="mx-auto max-w-5xl px-6 pb-16">
+        <div className="animate-fade-up stagger-1 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[
+            { label: "Candidates", value: d.totalCandidates.toString() },
+            { label: "Bias Score (Before)", value: d.biasedModel.biasScore.toFixed(2) },
+            { label: "Bias Score (After)", value: d.fairModel.biasScore.toFixed(2) },
+            { label: "DPD Reduction", value: `${((1 - d.fairModel.demographicParityDiff / d.biasedModel.demographicParityDiff) * 100).toFixed(0)}%` },
+          ].map(({ label, value }) => (
+            <div key={label} className="rounded-xl border border-border bg-card p-4 text-center">
+              <p className="text-2xl font-bold font-mono text-card-foreground">{value}</p>
+              <p className="text-xs text-muted-foreground mt-1">{label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -61,7 +81,7 @@ export default function Landing() {
           {pillars.map(({ icon: Icon, title, desc }, i) => (
             <div
               key={title}
-              className={`animate-fade-up stagger-${i + 1} rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow`}
+              className={`animate-fade-up stagger-${i + 2} rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow`}
             >
               <div className="mb-3 inline-flex rounded-lg bg-primary/10 p-2.5">
                 <Icon className="h-5 w-5 text-primary" />
@@ -107,7 +127,7 @@ export default function Landing() {
       </section>
 
       <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">
-        Built with Google Cloud · Fairlearn · SHAP · Gemini
+        Built with scikit-learn · Fairlearn · SHAP · Google Gemini · Google Cloud
       </footer>
     </div>
   );

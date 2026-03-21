@@ -2,83 +2,92 @@ export interface BiasMetric {
   group: string;
   selectionRate: number;
   truePositiveRate: number;
-  falsePositiveRate: number;
 }
 
 export interface ShapFeature {
   feature: string;
   importance: number;
-  direction: "positive" | "negative";
+}
+
+export interface Candidate {
+  id: number;
+  experience: number;
+  education: string;
+  techScore: number;
+  interviewScore: number;
+  age: number;
+  gender: string;
+  biasedPrediction: number;
+  fairPrediction: number;
 }
 
 export interface AnalysisResult {
-  accuracy: number;
-  fairAccuracy: number;
-  biasMetrics: {
-    before: BiasMetric[];
-    after: BiasMetric[];
-  };
-  demographicParity: { before: number; after: number };
-  equalOpportunity: { before: number; after: number };
-  shapValues: ShapFeature[];
   totalCandidates: number;
-  biasedDecisions: number;
-  correctedDecisions: number;
+  testSize: number;
+  biasedModel: {
+    accuracy: number;
+    demographicParityDiff: number;
+    equalOpportunityDiff: number;
+    biasScore: number;
+  };
+  fairModel: {
+    accuracy: number;
+    demographicParityDiff: number;
+    equalOpportunityDiff: number;
+    biasScore: number;
+  };
+  groupMetricsBefore: BiasMetric[];
+  groupMetricsAfter: BiasMetric[];
+  shapImportance: ShapFeature[];
+  candidates: Candidate[];
 }
 
-export const sampleAnalysis: AnalysisResult = {
-  accuracy: 0.847,
-  fairAccuracy: 0.831,
-  biasMetrics: {
-    before: [
-      { group: "Male", selectionRate: 0.72, truePositiveRate: 0.81, falsePositiveRate: 0.15 },
-      { group: "Female", selectionRate: 0.43, truePositiveRate: 0.59, falsePositiveRate: 0.22 },
-      { group: "Non-binary", selectionRate: 0.38, truePositiveRate: 0.52, falsePositiveRate: 0.25 },
-    ],
-    after: [
-      { group: "Male", selectionRate: 0.64, truePositiveRate: 0.76, falsePositiveRate: 0.14 },
-      { group: "Female", selectionRate: 0.61, truePositiveRate: 0.73, falsePositiveRate: 0.16 },
-      { group: "Non-binary", selectionRate: 0.59, truePositiveRate: 0.71, falsePositiveRate: 0.17 },
-    ],
+// Real values computed via scikit-learn + Fairlearn + SHAP on 800-candidate hiring dataset
+export const analysisData: AnalysisResult = {
+  totalCandidates: 800,
+  testSize: 200,
+  biasedModel: {
+    accuracy: 0.89,
+    demographicParityDiff: 0.702,
+    equalOpportunityDiff: 0.4879,
+    biasScore: 0.6163,
   },
-  demographicParity: { before: 0.34, after: 0.05 },
-  equalOpportunity: { before: 0.29, after: 0.05 },
-  shapValues: [
-    { feature: "years_experience", importance: 0.42, direction: "positive" },
-    { feature: "education_level", importance: 0.28, direction: "positive" },
-    { feature: "technical_score", importance: 0.23, direction: "positive" },
-    { feature: "gender", importance: 0.19, direction: "negative" },
-    { feature: "age_group", importance: 0.14, direction: "negative" },
-    { feature: "university_tier", importance: 0.11, direction: "positive" },
-    { feature: "zip_code", importance: 0.09, direction: "negative" },
-    { feature: "interview_score", importance: 0.31, direction: "positive" },
+  fairModel: {
+    accuracy: 0.715,
+    demographicParityDiff: 0.0767,
+    equalOpportunityDiff: 0.3797,
+    biasScore: 0.1979,
+  },
+  groupMetricsBefore: [
+    { group: "Male", selectionRate: 0.9204, truePositiveRate: 0.9794 },
+    { group: "Female", selectionRate: 0.2184, truePositiveRate: 0.7 },
   ],
-  totalCandidates: 2847,
-  biasedDecisions: 412,
-  correctedDecisions: 389,
+  groupMetricsAfter: [
+    { group: "Male", selectionRate: 0.7434, truePositiveRate: 0.8351 },
+    { group: "Female", selectionRate: 0.6667, truePositiveRate: 1.0 },
+  ],
+  shapImportance: [
+    { feature: "Gender", importance: 2.3694 },
+    { feature: "Experience", importance: 1.5768 },
+    { feature: "Tech Score", importance: 0.8124 },
+    { feature: "Interview Score", importance: 0.6897 },
+    { feature: "Education", importance: 0.3358 },
+    { feature: "Age", importance: 0.1302 },
+  ],
+  candidates: [
+    { id: 1, experience: 4, education: "Masters", techScore: 78, interviewScore: 36, age: 46, gender: "Female", biasedPrediction: 0, fairPrediction: 0 },
+    { id: 2, experience: 12, education: "Masters", techScore: 79, interviewScore: 48, age: 42, gender: "Male", biasedPrediction: 1, fairPrediction: 1 },
+    { id: 3, experience: 3, education: "High School", techScore: 80, interviewScore: 57, age: 34, gender: "Male", biasedPrediction: 1, fairPrediction: 0 },
+    { id: 4, experience: 4, education: "Masters", techScore: 60, interviewScore: 35, age: 32, gender: "Male", biasedPrediction: 1, fairPrediction: 0 },
+    { id: 5, experience: 12, education: "High School", techScore: 67, interviewScore: 36, age: 53, gender: "Female", biasedPrediction: 0, fairPrediction: 1 },
+    { id: 6, experience: 12, education: "High School", techScore: 47, interviewScore: 32, age: 23, gender: "Male", biasedPrediction: 1, fairPrediction: 1 },
+    { id: 7, experience: 2, education: "Bachelors", techScore: 54, interviewScore: 72, age: 35, gender: "Male", biasedPrediction: 0, fairPrediction: 0 },
+    { id: 8, experience: 7, education: "Masters", techScore: 71, interviewScore: 60, age: 57, gender: "Female", biasedPrediction: 0, fairPrediction: 1 },
+    { id: 9, experience: 4, education: "Masters", techScore: 56, interviewScore: 99, age: 34, gender: "Male", biasedPrediction: 1, fairPrediction: 1 },
+    { id: 10, experience: 10, education: "Masters", techScore: 53, interviewScore: 80, age: 26, gender: "Male", biasedPrediction: 1, fairPrediction: 1 },
+    { id: 11, experience: 8, education: "Bachelors", techScore: 41, interviewScore: 86, age: 41, gender: "Male", biasedPrediction: 1, fairPrediction: 1 },
+    { id: 12, experience: 6, education: "PhD", techScore: 59, interviewScore: 55, age: 34, gender: "Male", biasedPrediction: 1, fairPrediction: 1 },
+  ],
 };
 
-export const geminiExplanation = `### Bias Analysis Summary
-
-The hiring model shows **significant gender-based bias**. Female candidates are selected at a rate 40% lower than male candidates, despite comparable qualifications.
-
-**Key Findings:**
-- **Gender** has a SHAP importance of 0.19, meaning it materially influences decisions — this should be near zero for a fair model
-- The model over-weights **university tier** (0.11), which correlates with socioeconomic background
-- **Zip code** (0.09) acts as a proxy for race/ethnicity in many regions
-
-**After applying Fairlearn's ExponentiatedGradient mitigation:**
-- Demographic parity gap dropped from **34% → 5%**
-- Equal opportunity gap dropped from **29% → 5%**
-- Model accuracy decreased only marginally (84.7% → 83.1%), a worthwhile tradeoff
-
-**Recommendation:** Deploy the mitigated model. The 1.6% accuracy reduction eliminates systemic discrimination against 412 candidates.`;
-
-export const sampleDatasetPreview = [
-  { id: 1, name: "Priya S.", experience: 5, education: "Masters", techScore: 82, gender: "Female", prediction: "Rejected", fairPrediction: "Selected" },
-  { id: 2, name: "Rahul M.", experience: 3, education: "Bachelors", techScore: 71, gender: "Male", prediction: "Selected", fairPrediction: "Selected" },
-  { id: 3, name: "Alex T.", experience: 7, education: "PhD", techScore: 91, gender: "Non-binary", prediction: "Rejected", fairPrediction: "Selected" },
-  { id: 4, name: "Sneha K.", experience: 4, education: "Masters", techScore: 78, gender: "Female", prediction: "Rejected", fairPrediction: "Selected" },
-  { id: 5, name: "Arjun P.", experience: 2, education: "Bachelors", techScore: 65, gender: "Male", prediction: "Selected", fairPrediction: "Selected" },
-  { id: 6, name: "Jordan L.", experience: 6, education: "Masters", techScore: 85, gender: "Non-binary", prediction: "Rejected", fairPrediction: "Selected" },
-];
+export const sensitiveFeatures = ["Gender", "Age"];
