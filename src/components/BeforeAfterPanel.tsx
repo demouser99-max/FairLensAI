@@ -1,89 +1,34 @@
-import type { AnalysisResult } from "@/lib/mock-data";
 import { ArrowRight } from "lucide-react";
 
 interface Props {
-  analysis: AnalysisResult;
+  biasedAccuracy: number;
+  fairAccuracy: number;
+  biasedScore: number;
+  fairScore: number;
+  biasedDPD: number;
+  fairDPD: number;
 }
 
-export function BeforeAfterPanel({ analysis: d }: Props) {
+export function BeforeAfterPanel({ biasedAccuracy, fairAccuracy, biasedScore, fairScore, biasedDPD, fairDPD }: Props) {
+  const rows = [
+    { label: "Accuracy", before: `${(biasedAccuracy * 100).toFixed(1)}%`, after: `${(fairAccuracy * 100).toFixed(1)}%` },
+    { label: "Bias Score", before: biasedScore.toFixed(4), after: fairScore.toFixed(4) },
+    { label: "Demographic Parity Gap", before: `${(biasedDPD * 100).toFixed(1)}%`, after: `${(fairDPD * 100).toFixed(1)}%` },
+  ];
+
   return (
-    <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+    <div className="rounded-xl border border-border bg-card p-5 shadow-sm">
       <h3 className="text-sm font-semibold text-card-foreground mb-4">Before vs After Mitigation</h3>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Side
-          title="Biased Model"
-          variant="before"
-          accuracy={d.accuracy}
-          parityGap={d.demographicParity.before}
-          eqGap={d.equalOpportunity.before}
-          biased={d.biasedDecisions}
-        />
-        <Side
-          title="Fair Model"
-          variant="after"
-          accuracy={d.fairAccuracy}
-          parityGap={d.demographicParity.after}
-          eqGap={d.equalOpportunity.after}
-          corrected={d.correctedDecisions}
-        />
+      <div className="grid gap-3">
+        {rows.map(({ label, before, after }) => (
+          <div key={label} className="flex items-center gap-3 text-sm">
+            <span className="w-44 text-muted-foreground text-xs font-medium">{label}</span>
+            <span className="font-mono font-semibold text-destructive bg-destructive/10 rounded px-2 py-0.5 text-xs">{before}</span>
+            <ArrowRight className="h-3 w-3 text-muted-foreground shrink-0" />
+            <span className="font-mono font-semibold text-success bg-success/10 rounded px-2 py-0.5 text-xs">{after}</span>
+          </div>
+        ))}
       </div>
-      <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-        <span>Accuracy tradeoff:</span>
-        <span className="font-mono font-medium text-card-foreground">
-          {(d.accuracy * 100).toFixed(1)}%
-        </span>
-        <ArrowRight className="h-3 w-3" />
-        <span className="font-mono font-medium text-success">
-          {(d.fairAccuracy * 100).toFixed(1)}%
-        </span>
-        <span className="text-muted-foreground">
-          (−{((d.accuracy - d.fairAccuracy) * 100).toFixed(1)}%)
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function Side({
-  title,
-  variant,
-  accuracy,
-  parityGap,
-  eqGap,
-  biased,
-  corrected,
-}: {
-  title: string;
-  variant: "before" | "after";
-  accuracy: number;
-  parityGap: number;
-  eqGap: number;
-  biased?: number;
-  corrected?: number;
-}) {
-  const isBefore = variant === "before";
-  const borderColor = isBefore ? "border-destructive/20" : "border-success/20";
-  const accentText = isBefore ? "text-destructive" : "text-success";
-
-  return (
-    <div className={`rounded-lg border ${borderColor} p-4 space-y-2`}>
-      <p className={`text-xs font-semibold ${accentText} uppercase tracking-wide`}>{title}</p>
-      <Row label="Accuracy" value={`${(accuracy * 100).toFixed(1)}%`} />
-      <Row label="Parity Gap" value={`${(parityGap * 100).toFixed(1)}%`} highlight={isBefore} />
-      <Row label="EO Gap" value={`${(eqGap * 100).toFixed(1)}%`} highlight={isBefore} />
-      {biased !== undefined && <Row label="Biased Decisions" value={String(biased)} highlight />}
-      {corrected !== undefined && <Row label="Corrected" value={String(corrected)} />}
-    </div>
-  );
-}
-
-function Row({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
-  return (
-    <div className="flex justify-between text-sm">
-      <span className="text-muted-foreground">{label}</span>
-      <span className={`font-mono font-medium ${highlight ? "text-destructive" : "text-card-foreground"}`}>
-        {value}
-      </span>
     </div>
   );
 }
